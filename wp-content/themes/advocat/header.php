@@ -68,55 +68,60 @@
                 </div>
               </a>
             </div>
-            <ul class="rd-navbar-nav">
-              <li class="active"><a href="/">Главная</a>
-              </li>
-              <li><a href="/ob-advokate/">Об адвокате</a>
-              </li>
-              <li><a href="services.html">Юридическая помощь</a>
-                <ul class="rd-navbar-megamenu">
-                  <li>
-                    <!--<h5 class="rd-megamenu-header">Помощь адвоката физическим лицам</h5>-->
-                    <ul class="rd-navbar-list">
-                      <li><a href="service.html">Юридическое сопровождение</a></li>
-                      <li><a href="#">Экономические преступления</a></li>
-                      <li><a href="#">Арбитражные споры</a></li>
-                      <li><a href="#">Гражданские дела</a></li>
-                      <li><a href="#">Вопросы недвижимости</a></li>
+            <div class="rd-navbar-nav-wrap">
+              <div class="rd-navbar-nav-inner">
+                <div class="rd-navbar-btn-wrap"><a href="#" class="btn btn--small btn--gold" data-toggle="modal" data-target="#exampleModalCenter">Получить совет</a></div>
+                <ul class="rd-navbar-nav">
+                  <li class="active"><a href="/">Главная</a>
+                  </li>
+                  <li><a href="/ob-advokate/">Об адвокате</a>
+                  </li>
+                  <li><a href="services.html">Юридическая помощь</a>
+                    <ul class="rd-navbar-megamenu">
+                      <li>
+                        <!--<h5 class="rd-megamenu-header">Помощь адвоката физическим лицам</h5>-->
+                        <ul class="rd-navbar-list">
+                          <li><a href="service.html">Юридическое сопровождение</a></li>
+                          <li><a href="#">Экономические преступления</a></li>
+                          <li><a href="#">Арбитражные споры</a></li>
+                          <li><a href="#">Гражданские дела</a></li>
+                          <li><a href="#">Вопросы недвижимости</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="rd-navbar-list">
+                          <li><a href="#">Уголовные дела</a></li>
+                          <li><a href="#">Консультация по гражданскому праву</a></li>
+                          <li><a href="#">Представление интересов в судах</a></li>
+                          <li><a href="#">Жилищные споры</a></li>
+                          <li><a href="#">Трудовые споры</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="rd-navbar-list">
+                          <li><a href="#">Наследственные дела</a></li>
+                          <li><a href="#">Взыскание долгов</a></li>
+                          <li><a href="#">Семейные споры</a></li>
+                          <li><a href="#">Защита прав потребителей</a></li>
+                          <li><a href="#">Защита прав собственников</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="rd-navbar-list">
+                          <li><a href="#">Консультация по уголовным делам</a></li>
+                          <li><a href="#">Налоговые споры</a></li>
+                          <li><a href="#">Взыскание морального вреда</a></li>
+                          <li><a href="#">Личный или семейный адвокат</a></li>
+                          <li><a href="#">Споры со страховыми компаниями</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li>
-                    <ul class="rd-navbar-list">
-                      <li><a href="#">Уголовные дела</a></li>
-                      <li><a href="#">Консультация по гражданскому праву</a></li>
-                      <li><a href="#">Представление интересов в судах</a></li>
-                      <li><a href="#">Жилищные споры</a></li>
-                      <li><a href="#">Трудовые споры</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="rd-navbar-list">
-                      <li><a href="#">Наследственные дела</a></li>
-                      <li><a href="#">Взыскание долгов</a></li>
-                      <li><a href="#">Семейные споры</a></li>
-                      <li><a href="#">Защита прав потребителей</a></li>
-                      <li><a href="#">Защита прав собственников</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="rd-navbar-list">
-                      <li><a href="#">Консультация по уголовным делам</a></li>
-                      <li><a href="#">Налоговые споры</a></li>
-                      <li><a href="#">Взыскание морального вреда</a></li>
-                      <li><a href="#">Личный или семейный адвокат</a></li>
-                      <li><a href="#">Споры со страховыми компаниями</a></li>
-                    </ul>
+                  <li><a href="contacts.html">Контакты</a>
                   </li>
                 </ul>
-              </li>
-              <li><a href="contacts.html">Контакты</a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

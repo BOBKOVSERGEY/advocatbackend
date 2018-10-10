@@ -1,3 +1,30 @@
+<?php if (is_page( 'kontakty' )) {?>
+<section class="map">
+  <div class="rd-google-map">
+    <div id="google-map" data-zoom="15" data-x="37.5843909" data-y="55.81242" class="rd-google-map__model"></div>
+    <ul class="rd-google-map__locations">
+      <li data-x="37.5843909" data-y="55.81242">
+        <h5>Адвокатский кабинет Тыняной И.И.</h5>
+        <address class="contact-info">
+          <p>127254, Россия, г. Москва, ул. Руставели, дом 3, корпус 2, 1 этаж, офис 6</p>
+          <br>
+          <dl>
+            <dd><a href="tel:+74959699841"><i class="fa fa-phone" aria-hidden="true"></i> +7 (495) 969 98 41</a></dd>
+          </dl>
+          <dl>
+            <dd><a href="mailto:info@lawyersoffice.ru"><i class="fa fa-envelope"></i> info@lawyersoffice.ru</a></dd>
+          </dl>
+          <dl>
+            <dd><span>Время работы:<br>
+            С понедельника по четверг с 10:00 до 20:00;<br>
+            в пятницу с 10:00 до 17:00.</span></dd>
+          </dl>
+        </address>
+      </li>
+    </ul>
+  </div>
+</section>
+<?php } ?>
 <section class="form-main">
   <div class="container">
     <div class="row">

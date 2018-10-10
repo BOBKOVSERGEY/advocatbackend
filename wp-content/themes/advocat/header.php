@@ -117,7 +117,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a href="contacts.html">Контакты</a>
+                  <li><a href="/kontakty/">Контакты</a>
                   </li>
                 </ul>
               </div>
@@ -137,7 +137,7 @@
           <?php } else if (is_search()) {?>
             Поиск
           <?php } else if (is_404()) {?>
-            404
+            404 страница не найдена
           <?php } else {?>
             <?php the_title();?>
           <?php }?>
@@ -147,4 +147,9 @@
     </div>
     <div class="breadcrumb-modern__transform" style="background-image: url(<?php bloginfo('template_url')?>/dist/images/slider-vn-2.jpg);"></div>
   </div>
-  <?php } ?>
+  <?php }
+  if (is_page( 'kontakty' )) {
+    remove_filter( 'the_content', 'wpautop' );
+  }
+  ?>
+

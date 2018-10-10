@@ -119,3 +119,46 @@ if ( ! function_exists( 'wpt_setup' ) ):
 /* end menu*/
 
 require_once __DIR__ . '/inc/breadcrumbs.php';
+
+/**
+ * Поддержка миниатюр
+ */
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size( 1280,720 );
+/**
+ * End Поддержка миниатюр
+ */
+
+
+/**
+Регистрируем новый тип записи
+ */
+add_action('init', 'advocatPostTypes');
+
+function advocatPostTypes () {
+  // регистрация слайдера на главной
+  register_post_type('slider-main', [
+    'labels' => [
+      'name'               => 'Слайд на главной', // основное название для типа записи
+      'singular_name'      => 'Слайд', // название для одной записи этого типа
+      'add_new'            => 'Добавить новый', // для добавления новой записи
+      'add_new_item'       => 'Добавить новый слайд', // заголовка у вновь создаваемой записи в админ-панели.
+      'edit_item'          => 'Редактирование слайд', // для редактирования типа записи
+      'new_item'           => 'Новый слайд', // текст новой записи
+      'view_item'          => 'Смотреть слайд', // для просмотра записи этого типа.
+      'search_items'       => 'Искать слайды', // для поиска по этим типам записи
+      'not_found'          => 'Слайд не найдено', // если в результате поиска ничего не было найдено
+      'not_found_in_trash' => 'Не найдено в корзине слайда', // если не было найдено в корзине
+      'parent_item_colon'  => '', // для родителей (у древовидных типов)
+      'menu_name'          => 'Слайд на главной', // название меню
+    ],
+    'public'              => true,
+    'publicly_queryable'  => false, // убираем возможность перейти
+    'exclude_from_search' => true, // убираем из поиска
+    'menu_position'       => 25,
+    'menu_icon'           => 'dashicons-images-alt2',
+    'hierarchical'        => false,
+    'supports'            => array('title'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'query_var'           => false
+  ]);
+}

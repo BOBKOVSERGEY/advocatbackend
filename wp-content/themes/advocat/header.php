@@ -40,7 +40,7 @@
                           <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </div>
                         <div class="nav__address-text">
-                          <a href="#">Москва, улица Руставели, дом 3 корпус 2, офис 6</a>
+                          <a href="/kontakty/">Москва, улица Руставели, дом 3 корпус 2, офис 6</a>
                         </div>
                       </div>
                     </li>
@@ -76,7 +76,7 @@
                   </li>
                   <li><a href="/ob-advokate/">Об адвокате</a>
                   </li>
-                  <li><a href="services.html">Юридическая помощь</a>
+                  <li><a href="/pomoshh-advokata-yuridicheskim-i-fizicheskim-litsam/">Юридическая помощь</a>
                     <ul class="rd-navbar-megamenu">
                       <li>
                         <!--<h5 class="rd-megamenu-header">Помощь адвоката физическим лицам</h5>-->

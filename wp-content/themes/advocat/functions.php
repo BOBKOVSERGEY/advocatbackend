@@ -162,3 +162,97 @@ function advocatPostTypes () {
     'query_var'           => false
   ]);
 }
+
+
+/**
+ * Свои поля в категориии
+ */
+// добавляет вызов функции при инициализации административного раздела
+add_action('admin_init', 'category_custom_fields', 1);
+// функция расширения функционала административного раздела
+function category_custom_fields() {
+  // добавления действия после отображения формы ввода параметров категории
+  //add_action('lift_edit_form_fields', 'category_custom_fields_form');
+  // add_action('cat_add_form_fields', 'category_custom_fields_form');   - можно добавить поля при создании категории, но могут быть проблемы, так как категории сохраняются через ajax
+  // добавления действия при сохранении формы ввода параметров категории
+  //add_action('edited_lift', 'category_custom_fields_save');
+
+  add_action('category_edit_form_fields', 'category_custom_fields_form');
+  add_action('edited_category', 'category_custom_fields_save');
+}
+
+function category_custom_fields_form($tag) {
+  $t_id = $tag->term_id;
+  $cat_meta = get_option("category_$t_id");
+  ?>
+
+  <!-- текст -->
+  <tr class="form-field">
+    <th scope="row" valign="top"><label for="extra1">Подзаголовок категории:</label></th>
+    <td>
+      <textarea name="Cat_meta[cat_text1]" id="Cat_meta[cat_text1]"><?php echo $cat_meta['cat_text1'] ? $cat_meta['cat_text1'] : ''; ?></textarea>
+      <!--<input class="cat_img" type="text" name="Cat_meta[cat_title]" id="Cat_meta[cat_title]" size="25" style="width:60%;" value="<?php
+      echo
+      $cat_meta['cat_title'] ? $cat_meta['cat_title'] : '';
+      ?>"> -->
+      <p>Введите подзаголовок категории</p>
+      <br />
+    </td>
+  </tr>
+  <?php
+}
+
+function category_custom_fields_save($term_id) {
+  if (isset($_POST['Cat_meta'])) {
+    $t_id = $term_id;
+    $cat_meta = get_option("category_$t_id");
+    $cat_keys = array_keys($_POST['Cat_meta']);
+    foreach ($cat_keys as $key) {
+      if (isset($_POST['Cat_meta'][$key])) {
+        $cat_meta[$key] = $_POST['Cat_meta'][$key];
+      }
+    }
+//save the option array
+    update_option("category_$t_id", $cat_meta);
+  }
+}
+
+/**
+ * End Свои поля в категориии
+ */
+
+/**
+Длина анонса в блоге
+ */
+function new_excerpt_length($length) {
+  if(is_category()) {
+    return 10;
+  } else if (is_page()) {
+    return 60;
+  } else {
+    return 60;
+  }
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+/**
+end Длина анонса в блоге
+ */
+/**
+Окончание  анонса в блоге
+ */
+add_filter('excerpt_more', function($more) {
+  return '';
+});
+
+
+/**
+ * Длинна заголовка
+ */
+
+function do_heading($string, $word_limit) {
+  $words = explode(' ', $string, ($word_limit + 1));
+  if (count($words) > $word_limit)
+    array_pop($words);
+  echo implode(' ', $words);
+}

@@ -227,8 +227,8 @@ function category_custom_fields_save($term_id) {
 function new_excerpt_length($length) {
   if(is_category()) {
     return 10;
-  } else if (is_page()) {
-    return 60;
+  } else if (is_page('pomoshh-advokata-yuridicheskim-i-fizicheskim-litsam')) {
+    return 10;
   } else {
     return 60;
   }

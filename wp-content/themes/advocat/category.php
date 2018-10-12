@@ -29,7 +29,7 @@ $cat_data = get_option("category_$cat_id");
                     <span class="mercury-icon-briefcase"></span>
                   </div>
                   <div class="services__item-heading">
-                    <h5><?php echo do_heading(get_the_title(), 4);?></h5>
+                    <h5><?php the_title();?></h5>
                   </div>
                 </div>
                 <div class="services__item-divider"></div>

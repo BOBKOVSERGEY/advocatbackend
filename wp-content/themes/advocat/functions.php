@@ -256,3 +256,10 @@ function do_heading($string, $word_limit) {
     array_pop($words);
   echo implode(' ', $words);
 }
+
+/* Url сайта */
+function urlPath()
+{
+  return $_SERVER['REQUEST_URI'];
+}
+

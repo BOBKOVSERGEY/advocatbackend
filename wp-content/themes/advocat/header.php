@@ -7,6 +7,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <?php wp_head(); ?>
   <link href="<?php bloginfo('template_url')?>/dist/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+  <meta property="og:url" content="<?php echo bloginfo('url') . urlPath();?>">
+  <meta property="og:site_name" content="<?php if (is_front_page()) { bloginfo('name'); } else if(is_category()){ single_cat_title();} else {the_title(); }?>">
+  <meta property="og:image" content="<?php bloginfo('template_url')?>/dist/images/share.jpg">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1291">
+  <meta property="og:image:height" content="315">
+
+  <meta property="twitter:creator" content="Адвокат Тыняная Ирина Ивановна">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="<?php if (is_front_page()) { bloginfo('name'); } else if(is_category()){ single_cat_title();} else {the_title(); }?>">
+  <meta property="twitter:description" content="">
+  <meta property="twitter:image:src" content="<?php bloginfo('template_url')?>/dist/images/share.jpg">
+  <meta property="twitter:image:width" content="1291">
+  <meta property="twitter:image:height" content="315">
+  <meta name="msapplication-TileColor" content="#2A5977">
+  <meta name="theme-color" content="#2A5977">
 </head>
 <body>
 <div class="page">
@@ -81,17 +97,17 @@
                       <li>
                         <!--<h5 class="rd-megamenu-header">Помощь адвоката физическим лицам</h5>-->
                         <ul class="rd-navbar-list">
-                          <li><a href="service.html">Юридическое сопровождение</a></li>
-                          <li><a href="#">Экономические преступления</a></li>
-                          <li><a href="#">Арбитражные споры</a></li>
-                          <li><a href="#">Гражданские дела</a></li>
-                          <li><a href="#">Вопросы недвижимости</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-yuridicheskim-litsam/yuridicheskoe-soprovozhdenie-deyatelnosti-predpriyatiya/">Юридическое сопровождение</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-yuridicheskim-litsam/advokat-po-ekonomicheskim-prestupleniyam/">Экономические преступления</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-yuridicheskim-litsam/advokat-po-arbitrazhnym-delam/">Арбитражные споры</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-fizicheskim-litsam/advokat-po-grazhdanskomu-pravu/">Гражданские дела</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-yuridicheskim-litsam/advokat-po-voprosam-nedvizhimosti/">Вопросы недвижимости</a></li>
                         </ul>
                       </li>
                       <li>
                         <ul class="rd-navbar-list">
-                          <li><a href="#">Уголовные дела</a></li>
-                          <li><a href="#">Консультация по гражданскому праву</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-fizicheskim-litsam/advokat-po-ugolovnym-delam/">Уголовные дела</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-yuridicheskim-litsam/advokat-po-grazhdanskim-delam/">Консультация по гражданскому праву</a></li>
                           <li><a href="#">Представление интересов в судах</a></li>
                           <li><a href="#">Жилищные споры</a></li>
                           <li><a href="#">Трудовые споры</a></li>
@@ -108,10 +124,10 @@
                       </li>
                       <li>
                         <ul class="rd-navbar-list">
-                          <li><a href="#">Консультация по уголовным делам</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-fizicheskim-litsam/konsultatsiya-advokata-po-ugolovnym-delam/">Консультация по уголовным делам</a></li>
                           <li><a href="#">Налоговые споры</a></li>
                           <li><a href="#">Взыскание морального вреда</a></li>
-                          <li><a href="#">Личный или семейный адвокат</a></li>
+                          <li><a href="/yuridicheskaya-pomoshh-fizicheskim-litsam/lichnyj-ili-semejnyj-advokat/">Личный или семейный адвокат</a></li>
                           <li><a href="#">Споры со страховыми компаниями</a></li>
                         </ul>
                       </li>
@@ -129,7 +145,7 @@
   </header>
   <?php if (!is_front_page()) {?>
   <div class="breadcrumb-modern breadcrumb-modern__wrap" style="background-image: url(<?php bloginfo('template_url')?>/dist/images/slider-vn-2.jpg);">
-    <div class="container">
+    <div class="container container__relative">
       <div class="breadcrumb-modern__body">
         <h1 class="breadcrumb-modern__title">
           <?php if (is_category()) {?>
@@ -143,6 +159,25 @@
           <?php }?>
         </h1>
         <?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(' / '); ?>
+      </div>
+      <div class="breadcrumb-modern__share">
+        <div class="breadcrumb-modern__share-heading">
+          Поделиться
+        </div>
+        <div class="share share--center">
+          <div class="share__icon">
+            <img src="<?php bloginfo('template_url')?>/dist/images/share.svg" alt="">
+          </div>
+          <div class="share__hint">
+            <div class="share__button">
+              <button class="share__button-item" data-sharer="facebook" data-url="<?php echo bloginfo('url') . urlPath();?>"><i class="fa fa-facebook" aria-hidden="true"></i></button>
+              <button class="share__button-item" data-sharer="twitter" data-url="<?php echo bloginfo('url') . urlPath();?>" data-title="<?php if (is_front_page()) { bloginfo('name'); } else if(is_category()){ single_cat_title();} else {the_title(); }?>"><i class="fa fa-twitter"></i></button>
+              <button class="share__button-item" data-sharer="googleplus" data-url="<?php echo bloginfo('url') . urlPath();?>"><i class="fa fa-google-plus"></i></button>
+              <button class="share__button-item" data-sharer="vk" data-caption="" data-title="<?php if (is_front_page()) { bloginfo('name'); } else if(is_category()){ single_cat_title();} else {the_title(); }?>" data-url="<?php echo bloginfo('url') . urlPath();?>"><i class="fa fa-vk"></i></button>
+              <button class="share__button-item" data-sharer="okru" data-url="<?php echo bloginfo('url') . urlPath();?>" data-title="<?php if (is_front_page()) { bloginfo('name'); } else if(is_category()){ single_cat_title();} else {the_title(); }?>"><i class="fa fa-odnoklassniki"></i></button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="breadcrumb-modern__transform" style="background-image: url(<?php bloginfo('template_url')?>/dist/images/slider-vn-2.jpg);"></div>

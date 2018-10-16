@@ -183,7 +183,10 @@
     <div class="breadcrumb-modern__transform" style="background-image: url(<?php bloginfo('template_url')?>/dist/images/slider-vn-2.jpg);"></div>
   </div>
   <?php }
-  if (is_page( 'kontakty' )) {
+  if (is_page( 'kontakty')) {
+    remove_filter( 'the_content', 'wpautop' );
+  }
+  if (is_single(92)) {
     remove_filter( 'the_content', 'wpautop' );
   }
   ?>

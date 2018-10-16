@@ -2,6 +2,13 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+#RewriteRule ^(.*) https://%1/$1 [R=301,NE,L]
+
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f

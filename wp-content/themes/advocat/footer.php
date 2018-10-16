@@ -47,7 +47,7 @@
                   <input class="form-main__form-input" type="text" autocomplete="off" name="phone" placeholder="Ваш телефон">
                 </div>
                 <div class="form-main__form-wrapper-select">
-                  <select data-minimum-results-for-search="" name="help" class="select-filter"><!--Infinity-->
+                  <select data-minimum-results-for-search="Infinity" name="help" class="select-filter"><!--data-minimum-results-for-search="Infinity"-->
                     <option value="Юридическая помощь">Юридическая помощь</option>
                     <option value="Юридическое сопровождение">Юридическое сопровождение</option>
                     <option value="Арбитражные споры">Арбитражные споры</option>
@@ -148,7 +148,7 @@
                 <input class="modal-popup__form-input" type="text" autocomplete="off" name="phone" placeholder="Ваш телефон">
               </div>
               <div class="modal-popup__form-wrapper-select">
-                <select data-minimum-results-for-search="" name="help" class="select-filter"><!--Infinity-->
+                <select data-minimum-results-for-search="Infinity" name="help" class="select-filter"><!--data-minimum-results-for-search="Infinity"-->
                   <option value="Юридическая помощь">Юридическая помощь</option>
                   <option value="Юридическое сопровождение">Юридическое сопровождение</option>
                   <option value="Арбитражные споры">Арбитражные споры</option>
